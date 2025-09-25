@@ -48,6 +48,7 @@ Exemples de prompts à utiliser avec Copilot Chat :
 ### 5. Structure des commits
 
 Utilisez des messages de commit clairs en utilisant le conventional commit messages (Conventional Commits) :
+- `chore:` pour les tâches de maintenance et de construction d'architecture globale
 - `feat:` pour les nouvelles fonctionnalités
 - `fix:` pour les corrections de bugs
 - `docs:` pour la documentation
