@@ -33,4 +33,3 @@ D:\Works\Formations\elearning\curious-academy\ias\copilot\copilot-workflow-poc-1
 D:\Works\Formations\elearning\curious-academy\ias\copilot\copilot-workflow-poc-1\TestWithCopilotVS\TestWithCopilotVS\obj\Debug\net9.0\TestWithCopilotVS.pdb
 D:\Works\Formations\elearning\curious-academy\ias\copilot\copilot-workflow-poc-1\TestWithCopilotVS\TestWithCopilotVS\obj\Debug\net9.0\TestWithCopilotVS.genruntimeconfig.cache
 D:\Works\Formations\elearning\curious-academy\ias\copilot\copilot-workflow-poc-1\TestWithCopilotVS\TestWithCopilotVS\obj\Debug\net9.0\ref\TestWithCopilotVS.dll
-D:\Works\Formations\elearning\curious-academy\ias\copilot\copilot-workflow-poc-1\TestWithCopilotVS\TestWithCopilotVS\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

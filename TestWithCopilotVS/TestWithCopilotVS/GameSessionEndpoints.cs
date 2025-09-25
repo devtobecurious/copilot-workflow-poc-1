@@ -47,6 +47,18 @@ public static class FriendEndpoints
             var deleted = repo.Delete(id);
             return deleted ? Results.NoContent() : Results.NotFound();
         });
+
+        /// <summary>
+        /// Récupère la liste de tous les decks Magix de tous les amis.
+        /// </summary>
+        /// <remarks>
+        /// Retourne une liste d'objets DeckMagix (Id, Name, FriendId).
+        /// </remarks>
+        routes.MapGet("/friends/decks-magix", (IFriendRepository repo) =>
+        {
+            var decks = repo.GetAllDecksMagix();
+            return Results.Ok(decks);
+        });
     }
     /// <summary>
     /// Mappe les endpoints statistiques de jeu.
