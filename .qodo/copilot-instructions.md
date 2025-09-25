@@ -22,7 +22,7 @@ Ce projet est une API .NET 9 qui gère des sessions de jeu entre amis. Il utilis
 
 ### 3. Bonnes pratiques avec Copilot
 
-- **Validation** : Toujours valider les suggestions de Copilot avant de les accepter
+- **Validation** : Toujours valider les suggestions de Copilot avant de les accepter, attendre un GOO pour accepter
 - **Tests** : Demandez à Copilot de générer des tests unitaires pour le nouveau code, en mode TDD
 - **Sécurité** : Vérifiez que les suggestions respectent les bonnes pratiques de sécurité
 - **Performance** : Optimisez les requêtes et utilisez les bonnes pratiques .NET
