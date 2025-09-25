@@ -1,3 +1,90 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+
+# NuGet
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# Resharper
+*.ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Others
+*.vspscc
+*.vssscc
+*.pdb
+*.cache
+*.dbmdl
+*.bak
+*.backup
+*.tmp
+*.temp
+.vs/
+
+# Test results
+TestResults/
+
+# SonarQube
+.sonar/
+
+# DotCover
+*.dotCover
+
+# NCrunch
+*.ncrunch*
+_NCrunch_*/
+
+# Local history for Visual Studio
+.localhistory/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# VS Code settings
+.history/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Azure DevOps
+.ionide/
+
+# Others
+*.DS_Store
+*.AppleDouble
+*.LSOverride
+
 # Logs
 logs
 *.log

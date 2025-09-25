@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yNiRK/hezn0=",
+  "dgSpecHash": "YhN6z4KgSyA=",
   "success": true,
   "projectFilePath": "D:\\Works\\Formations\\elearning\\curious-academy\\ias\\copilot\\copilot-workflow-poc-1\\TestWithCopilotVS\\TestWithCopilotVS\\TestWithCopilotVS.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,11 @@
     "C:\\Users\\evan\\.nuget\\packages\\swashbuckle.aspnetcore\\9.0.4\\swashbuckle.aspnetcore.9.0.4.nupkg.sha512",
     "C:\\Users\\evan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.4\\swashbuckle.aspnetcore.swagger.9.0.4.nupkg.sha512",
     "C:\\Users\\evan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\9.0.4\\swashbuckle.aspnetcore.swaggergen.9.0.4.nupkg.sha512",
-    "C:\\Users\\evan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\9.0.4\\swashbuckle.aspnetcore.swaggerui.9.0.4.nupkg.sha512"
+    "C:\\Users\\evan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\9.0.4\\swashbuckle.aspnetcore.swaggerui.9.0.4.nupkg.sha512",
+    "C:\\Users\\evan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.6\\microsoft.windowsdesktop.app.ref.9.0.6.nupkg.sha512",
+    "C:\\Users\\evan\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.6\\microsoft.netcore.app.ref.9.0.6.nupkg.sha512",
+    "C:\\Users\\evan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.6\\microsoft.aspnetcore.app.ref.9.0.6.nupkg.sha512",
+    "C:\\Users\\evan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.6\\microsoft.netcore.app.host.win-x64.9.0.6.nupkg.sha512"
   ],
   "logs": []
 }

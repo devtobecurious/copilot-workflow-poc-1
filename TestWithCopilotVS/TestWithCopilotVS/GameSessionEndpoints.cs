@@ -1,3 +1,7 @@
+
+using TestWithCopilotVS;
+using System;
+using Microsoft.AspNetCore.Routing;
 namespace TestWithCopilotVS;
 
 // Endpoints sessions de jeux
@@ -42,6 +46,17 @@ public static class FriendEndpoints
         {
             var deleted = repo.Delete(id);
             return deleted ? Results.NoContent() : Results.NotFound();
+        });
+    }
+    /// <summary>
+    /// Mappe les endpoints statistiques de jeu.
+    /// </summary>
+    public static void MapStatistiqueEndpoints(this IEndpointRouteBuilder routes)
+    {
+        routes.MapGet("/stats", (StatistiqueRepository repo) =>
+        {
+            var stats = repo.GetAll();
+            return Results.Ok(stats);
         });
     }
 }
