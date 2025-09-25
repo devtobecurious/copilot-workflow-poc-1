@@ -45,15 +45,17 @@ Exemples de prompts à utiliser avec Copilot Chat :
 "Ajoute des commentaires XML pour cette méthode"
 ```
 
-### 5. Structure des commits
 
-Utilisez des messages de commit clairs en utilisant le conventional commit messages (Conventional Commits) :
-- `chore:` pour les tâches de maintenance et de construction d'architecture globale
-- `feat:` pour les nouvelles fonctionnalités
-- `fix:` pour les corrections de bugs
-- `docs:` pour la documentation
-- `refactor:` pour le refactoring
-- `test:` pour les tests
+### 5. Gestion des branches et structure des commits
+
+- **Avant chaque nouvelle feature**, créez une branche locale nommée `feat/{nom de la feature}` à partir de la branche `main`.
+- Utilisez des messages de commit clairs en utilisant le conventional commit messages (Conventional Commits) :
+	- `chore:` pour les tâches de maintenance et de construction d'architecture globale
+	- `feat:` pour les nouvelles fonctionnalités
+	- `fix:` pour les corrections de bugs
+	- `docs:` pour la documentation
+	- `refactor:` pour le refactoring
+	- `test:` pour les tests
 
 ### 6. Révision du code
 
