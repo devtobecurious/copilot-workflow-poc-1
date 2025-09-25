@@ -1,0 +1,3 @@
+﻿namespace TestWithCopilotVS;
+
+public static class GameSession

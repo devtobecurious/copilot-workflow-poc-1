@@ -1,0 +1,17 @@
+﻿public static class GameSessionEndpoints
+{
+    // méthode d'extension pour enregistrer les endpoints
+    public static void MapGameSessionEndpoints(this IEndpointRouteBuilder routes)
+    {
+        // création d'un endpoint pour lister les parties de jeux entre amis
+        routes.MapGet("/gamesessions", () =>
+        {
+            var gameSessions = new List<object>
+            {
+                new { Id = 1, StartDate = DateTime.Now.AddHours(-2), EndDate = DateTime.Now.AddHours(-1), Winner = "Alice", Game = "Chess" },
+                new { Id = 2, StartDate = DateTime.Now.AddHours(-3), EndDate = DateTime.Now.AddHours(-2), Winner = "Bob", Game = "Monopoly" }
+            };
+            return Results.Ok(gameSessions);
+        });
+    }
+}

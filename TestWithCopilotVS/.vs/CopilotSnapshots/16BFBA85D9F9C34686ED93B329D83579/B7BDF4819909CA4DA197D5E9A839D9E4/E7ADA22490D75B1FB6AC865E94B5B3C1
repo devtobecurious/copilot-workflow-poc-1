@@ -1,0 +1,4 @@
+﻿namespace TestWithCopilotVS;
+
+// Enregistre les endpoints liés aux sessions de jeu et aux amis
+public static class GameSession

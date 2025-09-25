@@ -1,0 +1,67 @@
+﻿public static class GameSessionEndpoints
+{
+    // méthode d'extension pour enregistrer les endpoints
+    public static void MapGameSessionEndpoints(this IEndpointRouteBuilder routes)
+    {
+        // création d'un endpoint pour lister les parties de jeux entre amis
+        routes.MapGet("/gamesessions", () =>
+        {
+            var gameSessions = new List<object>
+            {
+                new { Id = 1, StartDate = DateTime.Now.AddHours(-2), EndDate = DateTime.Now.AddHours(-1), Winner = "Alice", Game = "Chess" },
+                new { Id = 2, StartDate = DateTime.Now.AddHours(-3), EndDate = DateTime.Now.AddHours(-2), Winner = "Bob", Game = "Monopoly" }
+            };
+            return Results.Ok(gameSessions);
+        });
+    }
+}
+
+public static class FriendEndpoints
+{
+    // méthode d'extension pour enregistrer les endpoints liés aux amis
+    public static void MapFriendEndpoints(this IEndpointRouteBuilder routes)
+    {
+        // liste simulée d'amis (en mémoire)
+        var friends = new List<Friend>
+        {
+            new Friend(1, "Alice", "alice@example.com"),
+            new Friend(2, "Bob", "bob@example.com"),
+            new Friend(3, "Charlie", null)
+        };
+
+        // GET /friends - liste complète
+        routes.MapGet("/friends", () => Results.Ok(friends));
+
+        // GET /friends/{id} - détail
+        routes.MapGet("/friends/{id:int}", (int id) =>
+        {
+            var friend = friends.FirstOrDefault(f => f.Id == id);
+            return friend is not null ? Results.Ok(friend) : Results.NotFound();
+        });
+
+        // POST /friends - création
+        routes.MapPost("/friends", (Friend newFriend) =>
+        {
+            var nextId = friends.Max(f => f.Id) + 1;
+            var created = new Friend(nextId, newFriend.Name, newFriend.Email);
+            friends.Add(created);
+            return Results.Created($"/friends/{created.Id}", created);
+        });
+
+        // PUT /friends/{id} - mise à jour complète
+        routes.MapPut("/friends/{id:int}", (int id, Friend updated) =>
+        {
+            var index = friends.FindIndex(f => f.Id == id);
+            if (index == -1) return Results.NotFound();
+            friends[index] = updated with { Id = id };
+            return Results.Ok(friends[index]);
+        });
+
+        // DELETE /friends/{id} - suppression
+        routes.MapDelete("/friends/{id:int}", (int id) =>
+        {
+            var removed = friends.RemoveAll(f => f.Id == id);
+            return removed > 0 ? Results.NoContent() : Results.NotFound();
+        });
+    }
+}

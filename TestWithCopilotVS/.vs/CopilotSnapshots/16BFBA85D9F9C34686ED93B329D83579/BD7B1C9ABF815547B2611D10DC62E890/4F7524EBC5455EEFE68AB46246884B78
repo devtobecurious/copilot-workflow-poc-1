@@ -1,0 +1,4 @@
+﻿namespace TestWithCopilotVS;
+
+// Modèle représentant un ami
+public record Friend(int Id, string Name, string? Email);
