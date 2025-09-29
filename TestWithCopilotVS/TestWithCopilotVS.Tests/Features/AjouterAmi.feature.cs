@@ -44,9 +44,9 @@ namespace TestWithCopilotVS.Tests.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("fr"), "Features", "Ajouter un nouvel ami à une statistique de jeu", "  En tant que gestionnaire de session de jeu\r\n  Je veux pouvoir ajouter un ami à " +
-                    "la liste des amis présents dans une statistique\r\n  Afin de garder une trace des " +
-                    "participants à chaque session", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("fr"), "Features", "Ajouter un nouvel ami à une statistique de jeu", "  En tant que gestionnaire de session de jeu\n  Je veux pouvoir ajouter un ami à l" +
+                    "a liste des amis présents dans une statistique\n  Afin de garder une trace des pa" +
+                    "rticipants à chaque session", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
