@@ -1,7 +1,7 @@
-using TestWithCopilotVS;
 using TestWithCopilotVS.Models;
 using TestWithCopilotVS.Repositories.Interfaces;
 using TestWithCopilotVS.Repositories;
+using TestWithCopilotVS;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +32,7 @@ app.UseHttpsRedirection();
 app.UseCors(CustomCorsExtensions.CorsPolicyName);
 
 // Enregistrement des endpoints via méthode d'extension
+app.MapGameSessionEndpoints();
 app.MapFriendEndpoints();
 app.MapStatistiqueEndpoints();
 
