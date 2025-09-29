@@ -9,10 +9,15 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
     <PackageReference Include="xunit" Version="2.6.6" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.6.6" />
+    <PackageReference Include="SpecFlow" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.xUnit" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.74" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TestWithCopilotVS\TestWithCopilotVS.csproj" />
+    <ProjectReference Include="..\TestWithCopilotVS.Models\TestWithCopilotVS.Models.csproj" />
+    <ProjectReference Include="..\TestWithCopilotVS.Repositories\TestWithCopilotVS.Repositories.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
-using TestWithCopilotVS;
+using TestWithCopilotVS.Models;
+using TestWithCopilotVS.Repositories;
 using Xunit;
 
 namespace TestWithCopilotVS.Tests

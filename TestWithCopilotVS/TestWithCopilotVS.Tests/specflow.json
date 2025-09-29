@@ -1,0 +1,10 @@
+{
+  "specflow": {
+    "language": {
+      "feature": "fr-FR"
+    },
+    "bindingCulture": {
+      "name": "fr-FR"
+    }
+  }
+}
