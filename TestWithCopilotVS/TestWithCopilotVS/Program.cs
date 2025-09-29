@@ -1,4 +1,7 @@
 using TestWithCopilotVS;
+using TestWithCopilotVS.Models;
+using TestWithCopilotVS.Repositories.Interfaces;
+using TestWithCopilotVS.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,10 +10,15 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddCustomCors(builder.Configuration);
-// Dépôt des amis en mémoire (Singleton)
+
+// Dépôts en mémoire (Singleton)
 builder.Services.AddSingleton<IFriendRepository, InMemoryFriendRepository>();
-// Dépôt des statistiques en mémoire (Singleton)
-builder.Services.AddSingleton<StatistiqueRepository>();
+builder.Services.AddSingleton<IStatistiqueRepository, InMemoryStatistiqueRepository>();
+
+// Nouveaux dépôts pour les sessions et amis secondaires
+builder.Services.AddSingleton<IGameSessionRepository, InMemoryGameSessionRepository>();
+builder.Services.AddSingleton<ISessionFriendRepository, InMemorySessionFriendRepository>();
+builder.Services.AddSingleton<IFriendInvitationRepository, InMemoryFriendInvitationRepository>();
 
 var app = builder.Build();
 
@@ -24,10 +32,12 @@ app.UseHttpsRedirection();
 app.UseCors(CustomCorsExtensions.CorsPolicyName);
 
 // Enregistrement des endpoints via méthode d'extension
-
-app.MapGameSessionEndpoints();
 app.MapFriendEndpoints();
 app.MapStatistiqueEndpoints();
+
+// Nouveaux endpoints pour les sessions et amis secondaires
+app.MapSessionEndpoints();
+app.MapSessionFriendEndpoints();
 
 app.Run();
 

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Xunit;
-using TestWithCopilotVS;
+using TestWithCopilotVS.Models;
+using TestWithCopilotVS.Repositories;
 
 namespace TestWithCopilotVS.Tests
 {
@@ -9,7 +10,7 @@ namespace TestWithCopilotVS.Tests
         [Fact]
         public void Add_ShouldAssignIdAndStoreStatistique()
         {
-            var repo = new StatistiqueRepository();
+            var repo = new InMemoryStatistiqueRepository();
             var stat = new Statistique { NbSuccess = 2, AmisPresents = new List<string> { "Alice", "Bob" }, Gagnant = "Alice", Mois = 9, Annee = 2025 };
 
             var result = repo.Add(stat);
@@ -20,7 +21,7 @@ namespace TestWithCopilotVS.Tests
         [Fact]
         public void GetById_ShouldReturnCorrectStatistique()
         {
-            var repo = new StatistiqueRepository();
+            var repo = new InMemoryStatistiqueRepository();
             var stat = repo.Add(new Statistique { NbSuccess = 1, AmisPresents = new List<string> { "Bob" }, Gagnant = "Bob", Mois = 8, Annee = 2025 });
 
             var found = repo.GetById(stat.Id);
@@ -32,7 +33,7 @@ namespace TestWithCopilotVS.Tests
         [Fact]
         public void Delete_ShouldRemoveStatistique()
         {
-            var repo = new StatistiqueRepository();
+            var repo = new InMemoryStatistiqueRepository();
             var stat = repo.Add(new Statistique { NbSuccess = 3, AmisPresents = new List<string> { "Eve" }, Gagnant = "Eve", Mois = 7, Annee = 2025 });
 
             var deleted = repo.Delete(stat.Id);
