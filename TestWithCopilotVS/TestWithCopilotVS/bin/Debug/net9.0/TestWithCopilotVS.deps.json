@@ -8,7 +8,9 @@
     ".NETCoreApp,Version=v9.0": {
       "TestWithCopilotVS/1.0.0": {
         "dependencies": {
-          "Swashbuckle.AspNetCore": "9.0.4"
+          "Swashbuckle.AspNetCore": "9.0.4",
+          "TestWithCopilotVS.Models": "1.0.0",
+          "TestWithCopilotVS.Repositories": "1.0.0"
         },
         "runtime": {
           "TestWithCopilotVS.dll": {}
@@ -58,6 +60,25 @@
             "fileVersion": "9.0.4.1727"
           }
         }
+      },
+      "TestWithCopilotVS.Models/1.0.0": {
+        "runtime": {
+          "TestWithCopilotVS.Models.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TestWithCopilotVS.Repositories/1.0.0": {
+        "dependencies": {
+          "TestWithCopilotVS.Models": "1.0.0"
+        },
+        "runtime": {
+          "TestWithCopilotVS.Repositories.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -101,6 +122,16 @@
       "sha512": "sha512-2ugT2OvZsKHqk/2rMDmuqDuFmtix0NvzlXxAfnfHROVMTovbx7Z0UsOQHZa462DBTgdBFnR2Ss6wm4fypfymdA==",
       "path": "swashbuckle.aspnetcore.swaggerui/9.0.4",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.9.0.4.nupkg.sha512"
+    },
+    "TestWithCopilotVS.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TestWithCopilotVS.Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

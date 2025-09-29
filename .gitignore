@@ -8,6 +8,7 @@ obj/
 
 # Visual Studio Code
 .vscode/
+*.code-workspace
 
 # Build results
 [Dd]ebug/
@@ -224,3 +225,7 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+
+#Ignore vscode AI rules
+.github\instructions\codacy.instructions.md

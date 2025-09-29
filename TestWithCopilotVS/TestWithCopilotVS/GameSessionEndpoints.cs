@@ -1,5 +1,6 @@
 
-using TestWithCopilotVS;
+using TestWithCopilotVS.Models;
+using TestWithCopilotVS.Repositories.Interfaces;
 using System;
 using Microsoft.AspNetCore.Routing;
 namespace TestWithCopilotVS;
@@ -65,7 +66,7 @@ public static class FriendEndpoints
     /// </summary>
     public static void MapStatistiqueEndpoints(this IEndpointRouteBuilder routes)
     {
-        routes.MapGet("/stats", (StatistiqueRepository repo) =>
+        routes.MapGet("/stats", (IStatistiqueRepository repo) =>
         {
             var stats = repo.GetAll();
             return Results.Ok(stats);

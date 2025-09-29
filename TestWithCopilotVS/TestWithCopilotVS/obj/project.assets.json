@@ -91,6 +91,29 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "TestWithCopilotVS.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/TestWithCopilotVS.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TestWithCopilotVS.Models.dll": {}
+        }
+      },
+      "TestWithCopilotVS.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "TestWithCopilotVS.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TestWithCopilotVS.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TestWithCopilotVS.Repositories.dll": {}
+        }
       }
     }
   },
@@ -434,11 +457,23 @@
         "swashbuckle.aspnetcore.swaggerui.9.0.4.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "TestWithCopilotVS.Models/1.0.0": {
+      "type": "project",
+      "path": "../TestWithCopilotVS.Models/TestWithCopilotVS.Models.csproj",
+      "msbuildProject": "../TestWithCopilotVS.Models/TestWithCopilotVS.Models.csproj"
+    },
+    "TestWithCopilotVS.Repositories/1.0.0": {
+      "type": "project",
+      "path": "../TestWithCopilotVS.Repositories/TestWithCopilotVS.Repositories.csproj",
+      "msbuildProject": "../TestWithCopilotVS.Repositories/TestWithCopilotVS.Repositories.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Swashbuckle.AspNetCore >= 9.0.4"
+      "Swashbuckle.AspNetCore >= 9.0.4",
+      "TestWithCopilotVS.Models >= 1.0.0",
+      "TestWithCopilotVS.Repositories >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -476,7 +511,14 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Works\\Formations\\elearning\\curious-academy\\ias\\copilot\\copilot-workflow-poc-1\\TestWithCopilotVS\\TestWithCopilotVS.Models\\TestWithCopilotVS.Models.csproj": {
+              "projectPath": "D:\\Works\\Formations\\elearning\\curious-academy\\ias\\copilot\\copilot-workflow-poc-1\\TestWithCopilotVS\\TestWithCopilotVS.Models\\TestWithCopilotVS.Models.csproj"
+            },
+            "D:\\Works\\Formations\\elearning\\curious-academy\\ias\\copilot\\copilot-workflow-poc-1\\TestWithCopilotVS\\TestWithCopilotVS.Repositories\\TestWithCopilotVS.Repositories.csproj": {
+              "projectPath": "D:\\Works\\Formations\\elearning\\curious-academy\\ias\\copilot\\copilot-workflow-poc-1\\TestWithCopilotVS\\TestWithCopilotVS.Repositories\\TestWithCopilotVS.Repositories.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
