@@ -20,6 +20,12 @@ builder.Services.AddSingleton<IGameSessionRepository, InMemoryGameSessionReposit
 builder.Services.AddSingleton<ISessionFriendRepository, InMemorySessionFriendRepository>();
 builder.Services.AddSingleton<IFriendInvitationRepository, InMemoryFriendInvitationRepository>();
 
+// Dépôts pour l'API jeux vidéo
+builder.Services.AddSingleton<IVideoGameRepository, InMemoryVideoGameRepository>();
+builder.Services.AddSingleton<IGenreRepository, InMemoryGenreRepository>();
+builder.Services.AddSingleton<IPlatformRepository, InMemoryPlatformRepository>();
+builder.Services.AddSingleton<IPublisherRepository, InMemoryPublisherRepository>();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -39,6 +45,10 @@ app.MapStatistiqueEndpoints();
 // Nouveaux endpoints pour les sessions et amis secondaires
 app.MapSessionEndpoints();
 app.MapSessionFriendEndpoints();
+
+// Endpoints pour l'API jeux vidéo
+app.MapVideoGameEndpoints();
+app.MapGenreEndpoints();
 
 app.Run();
 
